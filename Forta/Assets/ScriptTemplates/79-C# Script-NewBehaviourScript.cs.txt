@@ -1,0 +1,9 @@
+using UnityEngine;
+
+namespace Forta
+{
+	public class #SCRIPTNAME# : MonoBehaviour
+	{
+		
+	}
+}

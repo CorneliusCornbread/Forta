@@ -1,0 +1,7 @@
+﻿namespace Forta
+{
+	public interface #SCRIPTNAME#
+	{
+
+	}
+}

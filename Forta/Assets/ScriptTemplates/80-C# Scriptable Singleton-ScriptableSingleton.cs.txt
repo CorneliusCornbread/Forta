@@ -1,0 +1,11 @@
+﻿using Forta.Tools;
+using UnityEngine;
+
+namespace Forta
+{
+	[CreateAssetMenu(menuName = "Forta/Singleton/#FILENAME#")]
+	public class #SCRIPTNAME# : SingletonScriptableObject<#SCRIPTNAME#>
+	{
+		
+	}
+}
