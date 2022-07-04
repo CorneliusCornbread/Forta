@@ -112,9 +112,12 @@ namespace Forta
 		#region Private Functions
 		private void OnUpdate()
 		{
-			//Update the pointer position every frame
-			PointerScreenPos = Controls.Player.Pointer.ReadValue<Vector2>();
-			PointerWorldPos = MainCam.ScreenToWorldPoint(PointerScreenPos);
+			if (Application.isFocused)
+			{
+				//Update the pointer position every frame
+				PointerScreenPos = Controls.Player.Pointer.ReadValue<Vector2>();
+				PointerWorldPos = MainCam.ScreenToWorldPoint(PointerScreenPos);
+			}
 			
 			Move = CalculateSmoothMove();
 		}
