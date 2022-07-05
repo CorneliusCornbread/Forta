@@ -154,7 +154,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1392284393
 MonoBehaviour:
@@ -168,6 +168,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ace5bcafbafb574daa0e8c8012727fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxVelocity: 10
+  speed: 4
 --- !u!212 &1392284394
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -233,15 +235,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2647728883935149258, guid: e4be38a2d29f7be4787dcbda43827261, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2647728883935149258, guid: e4be38a2d29f7be4787dcbda43827261, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.416667
+      value: -2.41
       objectReference: {fileID: 0}
     - target: {fileID: 2647728883935149258, guid: e4be38a2d29f7be4787dcbda43827261, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.5448551
+      value: -2.34
       objectReference: {fileID: 0}
     - target: {fileID: 2647728883935149258, guid: e4be38a2d29f7be4787dcbda43827261, type: 3}
       propertyPath: m_LocalPosition.z
@@ -360,7 +362,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1603824272
 BoxCollider2D:
@@ -523,11 +525,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2647728883935149258, guid: e4be38a2d29f7be4787dcbda43827261, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.416667
+      value: -1.59
       objectReference: {fileID: 0}
     - target: {fileID: 2647728883935149258, guid: e4be38a2d29f7be4787dcbda43827261, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.6025807
+      value: -3.84
       objectReference: {fileID: 0}
     - target: {fileID: 2647728883935149258, guid: e4be38a2d29f7be4787dcbda43827261, type: 3}
       propertyPath: m_LocalPosition.z
@@ -580,11 +582,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2647728883935149258, guid: e4be38a2d29f7be4787dcbda43827261, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.26
+      value: -3.55
       objectReference: {fileID: 0}
     - target: {fileID: 2647728883935149258, guid: e4be38a2d29f7be4787dcbda43827261, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.79
+      value: -3.82
       objectReference: {fileID: 0}
     - target: {fileID: 2647728883935149258, guid: e4be38a2d29f7be4787dcbda43827261, type: 3}
       propertyPath: m_LocalPosition.z

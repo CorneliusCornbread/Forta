@@ -7,8 +7,29 @@ namespace Forta
 {
 	public class PhysicsGrabber : MonoBehaviour
 	{
-		private Rigidbody2D _target;
+		public float maxVelocity = 10;
+		public float speed = 4;
+		
+		private Grabable _target;
 
+		private void OnGrab(InputAction.CallbackContext ctx)
+		{
+			if (_target != null)
+			{
+				_target.OnRelease();
+				_target = null;
+			}
+			else
+			{
+				_target = Grabable.SelectedGrabable;
+				
+				if (_target == null) return;
+				
+				_target.OnGrabbed();
+			}
+		}
+
+		#region Unity Events
 		private void Start()
 		{
 			InputManager.Instance.Controls.Player.Enable();
@@ -18,30 +39,17 @@ namespace Forta
 		private void FixedUpdate()
 		{
 			if (_target == null) return;
+
+			Rigidbody2D rb = _target.Rigidbody;
 			
 			Vector2 targetPos = InputManager.Instance.PointerWorldPos;
-			
-			_target.MovePosition(targetPos);
-		}
-		private void OnGrab(InputAction.CallbackContext ctx)
-		{
-			if (_target != null)
-			{
-				OnTargetDeselect();
-				return;
-			}
-			
-			_target = Grabable.SelectedGrabable;
-			
-			if (_target == null) return;
-			
-			_target.bodyType = RigidbodyType2D.Dynamic;
-		}
+			Vector2 currentPos = rb.transform.position;
+			Vector2 delta = targetPos - currentPos;
+			delta.x = Mathf.Clamp(delta.x, -maxVelocity, maxVelocity);
+			delta.y = Mathf.Clamp(delta.y, -maxVelocity, maxVelocity);
 
-		private void OnTargetDeselect()
-		{
-			_target.bodyType = RigidbodyType2D.Static;
-			_target = null;
+			rb.velocity = delta * speed;
 		}
+		#endregion
 	}
 }
